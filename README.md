@@ -44,7 +44,9 @@ The combined stress scenario demonstrates how simultaneous deterioration in depo
 
 Visualization
 
-The project generates a bar chart comparing LCR across the different scenarios, with the 100% threshold highlighted.
+The project generates a bar chart comparing LCR across the different scenarios, with the **100% threshold** highlighted.
+![LCR Stress Testing]
+(lcr_stress_testing.png)
 
 Technologies
 

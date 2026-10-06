@@ -96,5 +96,8 @@ plt.title("LCR Stress Testing")
 plt.xticks(rotation=20)
 
 plt.tight_layout()
+
+plt.savefig("lcr_stress_testing.png", dpi=300, bbox_inches="tight")
+
 plt.show()
 
