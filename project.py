@@ -67,17 +67,34 @@ combined_stress = stress_test(df,deposit_shock=0.50,funding_shock=0.50)
 hqla, outflows, inflows, eligible_inflows, net_cash_outflows,lcr = calculate_lcr(df)
 
 #Display results
-print("LCR calculation")
-print("----------------")
-print("HQLA:",hqla)
-print("Outflows:", net_cash_outflows)
-print("Inflows:", inflows)
-print(f"LCR:, {lcr:.2f}%")
+results = {"Base case": lcr, "Deposit Stress": deposit_stress[5], "Funding Stress": funding_stress[5], "Combined stress": combined_stress[5]}
 
-print("Stress Testing")
-print("----------------")
-print(f"Deposit Stress:, {deposit_stress[5]:.2f}%")
-print(f"Funding Stress:, {funding_stress[5]:.2f}%")
-print(f"Combined Stress:, {combined_stress[5]:.2f}%")
+print("\nLCR Stress Testing")
+print("---------------------------")
 
+for scenario, lcr_value in results.items():
+    if lcr_value>= 100:
+        status = "PASS"
+    else:
+        status = "FAIL"
+    print(f"{scenario:<20} {lcr_value:>8.2f}%  {status}")
+    
+#Adding Graphs
+import matplotlib.pyplot as plt
+
+scenarios = list(results.keys())
+lcr_values = list(results.values())
+
+plt.figure(figsize=(8, 5))
+
+plt.bar(scenarios, lcr_values)
+
+plt.axhline(y=100, linestyle="--")
+
+plt.ylabel("LCR (%)")
+plt.title("LCR Stress Testing")
+plt.xticks(rotation=20)
+
+plt.tight_layout()
+plt.show()
 
