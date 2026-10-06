@@ -1,0 +1,12 @@
+﻿Item,Category,Amount_EUR,Run_Off_Rates,Inflow_Rates,Haircut
+Cash,HQLA,50,0,0,0
+Central Bank Reserves,HQLA,70,0,0,0
+Government Bonds,HQLA,100,0,0,0.05
+Corporate Bonds,HQLA,350,0,0,0.15
+Retail Stable Deposits,Deposits,500,0.05,0,0
+Retail Less Stable Deposits,Deposits,300,0.1,0,0
+Corporate Deposits,Deposits,700,0.25,0,0
+Wholeale Funding,Funding,700,0.5,0,0
+Retail Loans,Loans,300,0,0.5,0
+Corporate Loans,Loans,300,0,0.5,0
+Undrawn Credit Facilities,Off Balance,150,0.1,0,0
