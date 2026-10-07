@@ -4,7 +4,7 @@ A Python-based educational project for calculating the Liquidity Coverage Ratio 
 
 The project demonstrates how Python and pandas can be used to automate liquidity risk calculations commonly used in banking.
 
-Project Overview
+##Project Overview
 
 The calculator processes balance-sheet and liquidity assumptions from a CSV input file and calculates:
 
@@ -18,7 +18,7 @@ The calculator processes balance-sheet and liquidity assumptions from a CSV inpu
 
 The project also includes simplified stress-testing scenarios to assess how changes in deposit and wholesale funding run-off assumptions affect the LCR.
 
-Methodology
+##Methodology
 
 The simplified LCR calculation is:
 
@@ -30,7 +30,7 @@ Net Cash Outflows = Expected Cash Outflows − Eligible Cash Inflows
 
 The model applies a simplified 75% cap on eligible cash inflows and adjusts HQLA for asset-specific haircuts.
 
-Stress Testing
+##Stress Testing
 
 The model includes four scenarios:
 
@@ -42,13 +42,12 @@ Combined Stress| 87.00%| FAIL
 
 The combined stress scenario demonstrates how simultaneous deterioration in deposit and wholesale funding assumptions can result in a liquidity shortfall.
 
-Visualization
+##Visualization
 
 The project generates a bar chart comparing LCR across the different scenarios, with the **100% threshold** highlighted.
-![LCR Stress Testing]
-(lcr_stress_testing.png)
+![LCR Stress Testing](lcr_stress_testing.png)
 
-Technologies
+##Technologies
 
 - Python
 - pandas
@@ -56,7 +55,7 @@ Technologies
 - CSV data processing
 - Git / GitHub
 
-Project Structure
+##Project Structure
 
 project/
 │
@@ -66,7 +65,7 @@ project/
 ├── requirements.txt
 └── .gitignore
 
-How to Run
+##How to Run
 
 Clone the repository and navigate to the project directory.
 
@@ -102,7 +101,7 @@ This project was developed to combine banking liquidity risk knowledge with prac
 - Data visualization with matplotlib
 - Git and GitHub version control
 
-Disclaimer
+##Disclaimer
 
 This is an educational portfolio project inspired by banking liquidity risk concepts.
 
